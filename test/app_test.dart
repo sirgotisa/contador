@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   testWidgets('test de texto principal', (tester) async {
     await tester.pumpWidget(new MyApp());
-    expect(find.text('Número de taps!!'), findsOneWidget);
+    //expect(find.text('Número de taps!!'), findsOneWidget);
     expect(find.text('Opssss!!'), findsOneWidget);
   });
 
