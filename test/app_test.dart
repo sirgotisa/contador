@@ -6,6 +6,7 @@ void main() {
   testWidgets('test de texto principal', (tester) async {
     await tester.pumpWidget(new MyApp());
     expect(find.text('Número de taps!!'), findsOneWidget);
+    expect(find.text('Opssss!!'), findsOneWidget);
   });
 
   testWidgets('test de botón incrementar', (tester) async {
