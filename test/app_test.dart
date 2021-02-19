@@ -67,5 +67,24 @@ void main() {
 
   });
 
+  testWidgets('test de función resetear', (tester) async {
+    await tester.pumpWidget(new MyApp());
+
+    Finder finder = find.widgetWithIcon(FloatingActionButton, Icons.remove);
+    expect(finder,findsOneWidget);
+
+    Finder finder2 = find.widgetWithIcon(FloatingActionButton, Icons.exposure_zero);
+    expect(finder2,findsOneWidget);
+
+    //Decrementamos a 1 el contador
+    await tester.tap(finder);
+    await tester.tap(finder2);
+    await tester.pumpAndSettle();
+
+    expect(
+      find.text('0'),findsOneWidget);
+
+  });
+
 
 }
